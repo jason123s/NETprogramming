@@ -17,7 +17,7 @@ namespace HelloWebClient
         protected void Button1_Click(object sender, EventArgs e)
         {
             HelloWebService.HelloWebServiceSoapClient client = new HelloWebService.HelloWebServiceSoapClient();
-            Label1.Text = client.GetMessage(TextBox1.Text);
+            Label1.Text = client.getMessage(TextBox1.Text);
         }
     }
 }

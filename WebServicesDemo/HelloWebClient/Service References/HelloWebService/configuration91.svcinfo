@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="DaCXoTeQaW8Q+GLO/v7g0MHP0x0=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="gifWLMHMTG31UxaOoaS7ymdrOl8=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="HelloWebServiceSoap">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="HelloWebServiceSoap" contract="HelloWebService.HelloWebServiceSoap" bindingType="basicHttpBinding" address="http://localhost:33919/HelloWebService.asmx" bindingConfiguration="HelloWebServiceSoap">
+    <endpoint name="HelloWebServiceSoap" contract="HelloWebService.HelloWebServiceSoap" bindingType="basicHttpBinding" address="http://localhost:63102/HelloWebService.asmx" bindingConfiguration="HelloWebServiceSoap">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:33919/HelloWebService.asmx</serializedValue>
+          <serializedValue>http://localhost:63102/HelloWebService.asmx</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

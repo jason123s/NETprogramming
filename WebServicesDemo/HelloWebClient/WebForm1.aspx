@@ -8,19 +8,21 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <table style ="font-family: Arial">
-        <tr>
-            <td>
-                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><asp:Button ID="Button1" runat="server" Text="Get Message" OnClick="Button1_Click" />
-            </td>
-        </tr>
+    <div>
+       <table stype ="font-family: Arial">
+           <tr>
+               <td>
+                   <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><asp:Button ID="Button1" runat="server" Text="Get Message" OnClick="Button1_Click" />
+               </td>
+           </tr>
 
-        <tr>
-            <td>
-                <asp:Label ID="Label1" runat="server" Font-Bold ="true"></asp:Label>
-            </td>
-        </tr>
-    </table>
+           <tr>
+               <td>
+                   <asp:Label ID="Label1" runat="server" Font-Bold ="true"></asp:Label>
+               </td>
+           </tr>
+       </table>
+    </div>
     </form>
 </body>
 </html>

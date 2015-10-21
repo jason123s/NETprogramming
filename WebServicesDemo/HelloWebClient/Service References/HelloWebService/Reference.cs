@@ -16,23 +16,26 @@ namespace HelloWebClient.HelloWebService {
     public interface HelloWebServiceSoap {
         
         // CODEGEN: Generating message contract since element name name from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetMessage", ReplyAction="*")]
-        HelloWebClient.HelloWebService.GetMessageResponse GetMessage(HelloWebClient.HelloWebService.GetMessageRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getMessage", ReplyAction="*")]
+        HelloWebClient.HelloWebService.getMessageResponse getMessage(HelloWebClient.HelloWebService.getMessageRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getMessage", ReplyAction="*")]
+        System.Threading.Tasks.Task<HelloWebClient.HelloWebService.getMessageResponse> getMessageAsync(HelloWebClient.HelloWebService.getMessageRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetMessageRequest {
+    public partial class getMessageRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMessage", Namespace="http://tempuri.org/", Order=0)]
-        public HelloWebClient.HelloWebService.GetMessageRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getMessage", Namespace="http://tempuri.org/", Order=0)]
+        public HelloWebClient.HelloWebService.getMessageRequestBody Body;
         
-        public GetMessageRequest() {
+        public getMessageRequest() {
         }
         
-        public GetMessageRequest(HelloWebClient.HelloWebService.GetMessageRequestBody Body) {
+        public getMessageRequest(HelloWebClient.HelloWebService.getMessageRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -41,15 +44,15 @@ namespace HelloWebClient.HelloWebService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetMessageRequestBody {
+    public partial class getMessageRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
         public string name;
         
-        public GetMessageRequestBody() {
+        public getMessageRequestBody() {
         }
         
-        public GetMessageRequestBody(string name) {
+        public getMessageRequestBody(string name) {
             this.name = name;
         }
     }
@@ -58,15 +61,15 @@ namespace HelloWebClient.HelloWebService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetMessageResponse {
+    public partial class getMessageResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMessageResponse", Namespace="http://tempuri.org/", Order=0)]
-        public HelloWebClient.HelloWebService.GetMessageResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getMessageResponse", Namespace="http://tempuri.org/", Order=0)]
+        public HelloWebClient.HelloWebService.getMessageResponseBody Body;
         
-        public GetMessageResponse() {
+        public getMessageResponse() {
         }
         
-        public GetMessageResponse(HelloWebClient.HelloWebService.GetMessageResponseBody Body) {
+        public getMessageResponse(HelloWebClient.HelloWebService.getMessageResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -75,16 +78,16 @@ namespace HelloWebClient.HelloWebService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetMessageResponseBody {
+    public partial class getMessageResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string GetMessageResult;
+        public string getMessageResult;
         
-        public GetMessageResponseBody() {
+        public getMessageResponseBody() {
         }
         
-        public GetMessageResponseBody(string GetMessageResult) {
-            this.GetMessageResult = GetMessageResult;
+        public getMessageResponseBody(string getMessageResult) {
+            this.getMessageResult = getMessageResult;
         }
     }
     
@@ -116,16 +119,28 @@ namespace HelloWebClient.HelloWebService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        HelloWebClient.HelloWebService.GetMessageResponse HelloWebClient.HelloWebService.HelloWebServiceSoap.GetMessage(HelloWebClient.HelloWebService.GetMessageRequest request) {
-            return base.Channel.GetMessage(request);
+        HelloWebClient.HelloWebService.getMessageResponse HelloWebClient.HelloWebService.HelloWebServiceSoap.getMessage(HelloWebClient.HelloWebService.getMessageRequest request) {
+            return base.Channel.getMessage(request);
         }
         
-        public string GetMessage(string name) {
-            HelloWebClient.HelloWebService.GetMessageRequest inValue = new HelloWebClient.HelloWebService.GetMessageRequest();
-            inValue.Body = new HelloWebClient.HelloWebService.GetMessageRequestBody();
+        public string getMessage(string name) {
+            HelloWebClient.HelloWebService.getMessageRequest inValue = new HelloWebClient.HelloWebService.getMessageRequest();
+            inValue.Body = new HelloWebClient.HelloWebService.getMessageRequestBody();
             inValue.Body.name = name;
-            HelloWebClient.HelloWebService.GetMessageResponse retVal = ((HelloWebClient.HelloWebService.HelloWebServiceSoap)(this)).GetMessage(inValue);
-            return retVal.Body.GetMessageResult;
+            HelloWebClient.HelloWebService.getMessageResponse retVal = ((HelloWebClient.HelloWebService.HelloWebServiceSoap)(this)).getMessage(inValue);
+            return retVal.Body.getMessageResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<HelloWebClient.HelloWebService.getMessageResponse> HelloWebClient.HelloWebService.HelloWebServiceSoap.getMessageAsync(HelloWebClient.HelloWebService.getMessageRequest request) {
+            return base.Channel.getMessageAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<HelloWebClient.HelloWebService.getMessageResponse> getMessageAsync(string name) {
+            HelloWebClient.HelloWebService.getMessageRequest inValue = new HelloWebClient.HelloWebService.getMessageRequest();
+            inValue.Body = new HelloWebClient.HelloWebService.getMessageRequestBody();
+            inValue.Body.name = name;
+            return ((HelloWebClient.HelloWebService.HelloWebServiceSoap)(this)).getMessageAsync(inValue);
         }
     }
 }

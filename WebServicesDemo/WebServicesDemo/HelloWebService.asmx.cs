@@ -18,7 +18,7 @@ namespace WebServicesDemo
     {
 
         [WebMethod]
-        public string GetMessage(string name)
+        public string getMessage(string name)
         {
             return "Hello " + name;
         }
