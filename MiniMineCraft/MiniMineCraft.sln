@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniMineCraft", "MiniMineCraft\MiniMineCraft\MiniMineCraft.csproj", "{2099A374-D8E1-4256-93EA-36926663B2A3}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "MiniMineCraftContent", "MiniMineCraft\MiniMineCraftContent\MiniMineCraftContent.contentproj", "{C71C605D-6875-462F-A3F6-44F22ADB8ADA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2099A374-D8E1-4256-93EA-36926663B2A3}.Debug|x86.ActiveCfg = Debug|x86
+		{2099A374-D8E1-4256-93EA-36926663B2A3}.Debug|x86.Build.0 = Debug|x86
+		{2099A374-D8E1-4256-93EA-36926663B2A3}.Release|x86.ActiveCfg = Release|x86
+		{2099A374-D8E1-4256-93EA-36926663B2A3}.Release|x86.Build.0 = Release|x86
+		{C71C605D-6875-462F-A3F6-44F22ADB8ADA}.Debug|x86.ActiveCfg = Debug|x86
+		{C71C605D-6875-462F-A3F6-44F22ADB8ADA}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
